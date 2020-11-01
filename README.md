@@ -78,6 +78,7 @@ isPrime:
 notPrime:
         dec [counter]
         jmp postlp
+        
 ;====================
 
 section '.idata'  import data readable
