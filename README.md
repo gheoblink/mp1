@@ -73,11 +73,13 @@ isPrime:
                 jmp stpr
 
 
-;=============================================
+;====================
+
 notPrime:
         dec [counter]
         jmp postlp
-;=============================================
+;====================
+
 section '.idata'  import data readable
 
         library kernel, 'kernel32.dll',\
