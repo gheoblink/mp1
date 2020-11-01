@@ -59,14 +59,14 @@ isPrime:
         stpr:
                 inc ecx       
 
-                cmp ecx, ebx ;postlp
+                cmp ecx, ebx
                 jge postlp
 
                 xor edx, edx
                 mov eax, ebx
                 div ecx
 
-                cmp edx, 0 ;ost
+                cmp edx, 0
                 je notPrime
 
 
