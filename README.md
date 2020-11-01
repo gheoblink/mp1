@@ -33,15 +33,20 @@ section '.code' code readable executable
         call [scanf]
 
 startPrime:
-        mov ebx, 2
-        lp:
-                mov ecx, 1
-                jmp isPrime
-                postlp:
-                inc ebx
 
-                cmp ebx, [scanNum]
-                jle lp
+        mov ebx, 2
+        
+        lp:
+        
+                mov ecx, 1
+                
+                jmp isPrime
+                
+                postlp:
+                
+                        inc ebx
+                        cmp ebx, [scanNum]
+                        jle lp
         finish:
 
 
@@ -55,18 +60,23 @@ startPrime:
 ;===================
 isPrime:
 
-        inc [counter]         
+        inc [counter]   
+        
         stpr:
                 inc ecx       
 
                 cmp ecx, ebx
+                
                 jge postlp
 
                 xor edx, edx
+                
                 mov eax, ebx
+                
                 div ecx
 
                 cmp edx, 0
+                
                 je notPrime
 
 
